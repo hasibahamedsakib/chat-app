@@ -4,6 +4,7 @@ UrChat is a chatbot application that provides a conversational interface for use
 
 ## Features
 
+- **Component UI**: Build shadcn-ui component library.
 - **Responsive UI**: Built with React and styled using Tailwind CSS.
 - **Dynamic Responses**: Supports intelligent responses from OpenAI's GPT-3.5-Turbo model.
 - **Fallback API**: Includes a mock API with predefined responses for specific keywords.
