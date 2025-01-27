@@ -97,7 +97,7 @@ const ChatApp = () => {
       </h1>
       <div
         ref={chatContainerRef}
-        className="flex-1 overflow-y-auto p-4 space-y-4 bg-slate-200"
+        className="flex-1 overflow-y-auto p-4 space-y-4 bg-slate-100"
       >
         {messages.map((message, index) => (
           <div
@@ -124,7 +124,7 @@ const ChatApp = () => {
         )}
       </div>
 
-      <div className="p-4 border-t bg-slate-200 ">
+      <div className="p-4 border-t bg-slate-100 ">
         <form onSubmit={handleSubmit} className="flex gap-2">
           <Input
             value={input}
