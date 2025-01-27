@@ -1,3 +1,5 @@
+//!API:1=> OPENAPI-API
+
 // import OpenAI from "openai";
 // import { NextResponse } from "next/server";
 
@@ -29,6 +31,7 @@
 
 //     const completion = await openai.chat.completions.create({
 //       model: "gpt-3.5-turbo",
+//       // eslint-disable-next-line @typescript-eslint/no-explicit-any
 //       messages: messages.map((message: any) => ({
 //         role: message.role,
 //         content: message.content,
@@ -40,13 +43,14 @@
 //     return NextResponse.json({
 //       message: completion.choices[0].message,
 //     });
+//     // eslint-disable-next-line @typescript-eslint/no-explicit-any
 //   } catch (error: any) {
 //     // Detailed error logging
-//     console.error("Detailed API error:", {
-//       name: error.name,
-//       message: error.message,
-//       stack: error.stack,
-//     });
+//     // console.error("Detailed API error:", {
+//     //   name: error.name,
+//     //   message: error.message,
+//     //   stack: error.stack,
+//     // });
 
 //     // Return more specific error message
 //     return NextResponse.json(
@@ -59,7 +63,7 @@
 //   }
 // }
 
-//! this is a moc data api route
+//!API:2=> This is a moc data api Response by Own data model.
 
 import { NextResponse } from "next/server";
 
@@ -94,7 +98,7 @@ const responses = {
   ],
 };
 
-function categorizeMessage(message: string): keyof typeof responses {
+const categorizeMessage = (message: string): keyof typeof responses => {
   message = message.toLowerCase();
   if (
     message.includes("creator") ||
@@ -131,9 +135,9 @@ function categorizeMessage(message: string): keyof typeof responses {
   }
 
   return "general";
-}
+};
 
-function getSmartResponse(message: string): string {
+const getSmartResponse = (message: string): string => {
   const category = categorizeMessage(message);
   const responseArray = responses[category];
   const randomResponse =
@@ -147,7 +151,7 @@ function getSmartResponse(message: string): string {
   }
 
   return randomResponse;
-}
+};
 
 export async function POST(req: Request) {
   try {
