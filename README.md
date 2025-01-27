@@ -2,6 +2,8 @@
 
 UrChat is a chatbot application that provides a conversational interface for users. It integrates the OpenAI API for intelligent responses and a mock API for predefined responses based on categorized inputs.
 
+**Live Demo**: [UrChaT](https://ur-chat-ai.vercel.app/)
+
 ## Features
 
 - **Component UI**: Build shadcn-ui component library.
