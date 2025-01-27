@@ -1,36 +1,27 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# UrChat
 
-## Getting Started
+UrChat is a chatbot application that provides a conversational interface for users. It integrates the OpenAI API for intelligent responses and a mock API for predefined responses based on categorized inputs.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Responsive UI**: Built with React and styled using Tailwind CSS.
+- **Dynamic Responses**: Supports intelligent responses from OpenAI's GPT-3.5-Turbo model.
+- **Fallback API**: Includes a mock API with predefined responses for specific keywords.
+- **Interactive Chat**: Real-time user interaction with smooth scrolling and loading indicators.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Prerequisites
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Node.js (version 16 or later)
+- npm or yarn
+- OpenAI API key (for OpenAI integration)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Installation
 
-## Learn More
+1. Clone the repository:
 
-To learn more about Next.js, take a look at the following resources:
+   ```bash
+   git clone https://github.com/hasibahamedsakib/chat-app.git
+   cd chat-app
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Developed by Hasib Ahamed Sakib.**: This updated version clearly indicates the issue with the OpenAI API integration while explaining the fallback to the mock API. Let me know if you need further adjustments!.
