@@ -22,6 +22,10 @@ UrChat is a chatbot application that provides a conversational interface for use
    ```bash
    git clone https://github.com/hasibahamedsakib/chat-app.git
    cd chat-app
+
+   npm install
+
+   npm run dev
    ```
 
 - **Developed by Hasib Ahamed Sakib.**: This updated version clearly indicates the issue with the OpenAI API integration while explaining the fallback to the mock API. Let me know if you need further adjustments!.
