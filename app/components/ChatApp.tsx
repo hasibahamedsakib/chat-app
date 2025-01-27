@@ -11,7 +11,7 @@ interface Message {
   content: string;
 }
 
-export default function ChatApp() {
+const ChatApp = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       role: "assistant",
@@ -35,10 +35,10 @@ export default function ChatApp() {
     setMessages((prev) => [...prev, userMessageObj]);
 
     try {
-      console.log("Sending request with messages:", [
-        ...messages,
-        userMessageObj,
-      ]);
+      // console.log("Sending request with messages:", [
+      //   ...messages,
+      //   userMessageObj,
+      // ]);
 
       const response = await fetch("/api/chat", {
         method: "POST",
@@ -82,6 +82,7 @@ export default function ChatApp() {
     }
   };
 
+  // auto scrolling...
   useEffect(() => {
     if (chatContainerRef.current) {
       chatContainerRef.current.scrollTop =
@@ -90,13 +91,13 @@ export default function ChatApp() {
   }, [messages]);
 
   return (
-    <Card className="max-w-2xl mx-auto h-[600px] flex flex-col">
-      <h1 className="text-center text-xl lg:text-2xl font-semibold font-mono bg-pink-100 p-2">
+    <Card className="max-w-2xl lg:w-[550px] mx-auto h-[600px] flex flex-col shadow-lg">
+      <h1 className="text-center text-xl lg:text-2xl font-semibold font-mono bg-pink-200 p-2">
         UR CHAT
       </h1>
       <div
         ref={chatContainerRef}
-        className="flex-1 overflow-y-auto p-4 space-y-4"
+        className="flex-1 overflow-y-auto p-4 space-y-4 bg-slate-200"
       >
         {messages.map((message, index) => (
           <div
@@ -123,7 +124,7 @@ export default function ChatApp() {
         )}
       </div>
 
-      <div className="p-4 border-t">
+      <div className="p-4 border-t bg-slate-200 ">
         <form onSubmit={handleSubmit} className="flex gap-2">
           <Input
             value={input}
@@ -138,4 +139,6 @@ export default function ChatApp() {
       </div>
     </Card>
   );
-}
+};
+
+export default ChatApp;
